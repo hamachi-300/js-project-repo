@@ -50,7 +50,8 @@ p:after {
     border-radius: 5px;
     box-shadow: 2px 2px 2px var(--primary-blue);
     color: var(--primary-color);
-    padding-top: 2px
+    padding: 2px 0;
+    cursor: pointer;
 }
 
 .text-project {
