@@ -35,15 +35,17 @@ p:after {
 .content {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-.items {
-    text-align: center;
+.content a {
+    display: block;
+    box-sizing: border-box;
+    width: 25%;
     overflow: hidden;
-    margin: 0 2em;
-    width: 6em;
+    margin: 2em 2em;
     height: 5em;
     background-color: var(--secondary-blue);
     order: 1;
@@ -51,17 +53,18 @@ p:after {
     box-shadow: 2px 2px 2px var(--primary-blue);
     color: var(--primary-color);
     padding: 2px 0;
-    cursor: pointer;
+}
+
+.items {
+    text-align: center;
 }
 
 .text-project {
     font-size: 1.5em;
 }
 
-.items:hover {
+.content a:hover {
     background-color: var(--third-blue);
-    width: 10em;
-    animation: expand 0.5s alternate;
 }
 
 header p {
@@ -80,14 +83,13 @@ header p {
     header {
         font-size: 1em;
     }
+
+    .content a {
+        width: 50%;
+    }
 }
 
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-}
-
-@keyframes expand {
-    from { width: 6em }
-    to { width: 10em; }
 }
