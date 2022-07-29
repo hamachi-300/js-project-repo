@@ -2,6 +2,10 @@ let input = document.getElementById('input');
 let btn = document.getElementById('btn');
 let output = document.getElementById('output');
 
+//theme change section
+let body = document.body;
+let themeBt = document.querySelector('#themeBt');
+
 function calculate() {
     let number = Number(input.value);
     let text = ''
@@ -22,3 +26,7 @@ function calculate() {
 }
 
 btn.addEventListener('click', calculate);
+
+themeBt.addEventListener('click', () => {
+    body.classList.toggle('db');
+});
